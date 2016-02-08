@@ -1,0 +1,15 @@
+<template name="appointmentsList">
+  <div class="appointments">
+    {{#if currentUser}}
+      {{#each appointments}}
+        {{> appointmentItem}}
+      {{/each}}
+    {{else}}
+    <div class="jumbotron">
+    <h1>Dormcuts</h1>
+    <p>On demand haircuts for college students</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+    {{/if}}
+  </div>
+</template>
