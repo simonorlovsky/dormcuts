@@ -1,9 +1,34 @@
 <template name="appointmentsList">
-  <div class="appointments">
+
+    <style media="screen">
+      .panel-profile
+      .panel-title{margin-bottom:5px}
+      .panel-profile
+      .panel-heading{height:150px;background-size:cover}
+      .panel-profile-img{max-width:100px;margin-top:-70px;margin-bottom:5px;border:3px solid #fff;border-radius:100%;box-shadow:0 1px 1px rgba(0,0,0,0.1)}
+      .m-b-0{margin-bottom:0 !important}
+    </style>
     {{#if currentUser}}
+      <div class="col-md-4 m-b-lg">
+        <div class="panel panel-default panel-profile m-b-0">
+          <div class="panel-heading" style="background-image: url(//cdn.shopify.com/s/files/1/0691/5403/t/116/assets/insta-2.jpg?16964048703312813139);"></div>
+          <div class="panel-body text-center">
+            <img class="panel-profile-img" src="http://simonorlovsky.github.io/images/Profile.png
+            ">
+            <h5 class="panel-title">Simon Orlovsky</h5>
+            <p class="m-b">Junior Computer Science Major at Carleton College.</p>
+            <a href="//simonorlovsky.com/" target="_blank" class="btn btn-primary-outline btn-sm m-b">
+              <span class="icon icon-add-user"></span> View website
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h3 class="text-center">Appointments at Carleton College</h3>
       {{#each appointments}}
         {{> appointmentItem}}
       {{/each}}
+      </div>
     {{else}}
     <div class="jumbotron">
     <h1>Dormcuts</h1>
@@ -11,5 +36,4 @@
     <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
     </div>
     {{/if}}
-  </div>
 </template>
