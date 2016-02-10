@@ -5,11 +5,10 @@
       <div class="panel-body">
         <a href="{{pathFor 'appointmentPage'}}" class="discuss btn btn-primary">Book</a>
       </div>
+      <p>
+        submitted by {{author}}
+        {{#if ownAppointment}}<a href="{{pathFor 'appointmentEdit'}}">Edit</a>{{/if}}
+      </p>
     </div>
-
-
-
   </div>
-
-
 </template>
