@@ -8,6 +8,7 @@ Template.appointmentEdit.events({
       url: $(e.target).find('[name=url]').val(),
       title: $(e.target).find('[name=title]').val()
     }
+    
 
     Appointments.update(currentAppointmentId, {$set: appointmentProperties}, function(error) {
       if (error) {
